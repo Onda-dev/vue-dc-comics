@@ -5,35 +5,8 @@
         </div>
         <nav class="header__nav">
             <ul>
-                <li>
-                    <a href="#">characters</a>
-                </li>
-                <li>
-                    <a href="#">comics</a>
-                </li>
-                <li>
-                    <a href="#">movies</a>
-                </li>
-                <li>
-                    <a href="#">tv</a>
-                </li>
-                <li>
-                    <a href="#">games</a>
-                </li>
-                <li>
-                    <a href="#">collectibles</a>
-                </li>
-                <li>
-                    <a href="#">videos</a>
-                </li>
-                <li>
-                    <a href="#">fans</a>
-                </li>
-                <li>
-                    <a href="#">news</a>
-                </li>
-                <li>
-                    <a href="#">shop</a>
+                <li v-for="(link, index) in links" :key="index" :class="{active : link.current}">
+                    <a :href="link.url">{{link.text}}</a>
                 </li>
             </ul>
         </nav>
@@ -42,7 +15,63 @@
 
 <script>
 export default {
-    name: 'HeaderComponent'
+    name: 'HeaderComponent',
+    data() {
+        return {
+            links: [
+                {
+                    text: "characters",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "comics",
+                    url: "#",
+                    current: true,
+                },
+                {
+                    text: "movies",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "tv",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "games",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "collectibles",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "videos",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "fans",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "news",
+                    url: "#",
+                    current: false,
+                },
+                {
+                    text: "shop",
+                    url: "#",
+                    current: false,
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -53,9 +82,19 @@ export default {
     align-items: center;
     padding: 1.25rem 0;
     
-    &__nav ul {
-        display: flex;
-        flex-direction: row;
+    &__nav {
+        ul {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__nav {
+        ul {
+            li {
+                padding: 1.25rem;
+            }
+        }
     }
 }
 
