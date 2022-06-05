@@ -220,7 +220,7 @@ export default {
 
 .footer-bottom {
     background-color: var(--second-color);
-    padding: 3.75rem;
+    padding: 2.5rem;
     
     .container {
         display: flex;
@@ -231,6 +231,12 @@ export default {
             height: 100%;
             background-color: rgba($color: #000000, $alpha: 0);
             border: .125rem solid var(--first-color);
+        }
+
+        ul {
+            display: flex;
+            gap: 1.25rem;
+            align-items: center;
         }
     }
 }
