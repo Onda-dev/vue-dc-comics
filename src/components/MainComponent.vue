@@ -60,6 +60,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+    max-width: var(--main-container);
+}
 .content {
     background-color: black;
     padding: 3.75rem;
@@ -71,7 +74,7 @@ export default {
 main ul {
     display: flex;
     justify-content: center;
-    gap: 6.25rem;
+    gap: 2.5rem;
 }
 main ul li {
     display: inline-block;

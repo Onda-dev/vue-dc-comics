@@ -28,9 +28,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="logo">
-                    <img src="../assets/img/dc-logo-bg.png" alt="dc logo">
-                </div>
+                <div class="logo"></div>
             </div>
         </div>
 
@@ -193,24 +191,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+    max-width: var(--main-container);
+}
 .footer-top {
-    padding: 3.75rem 0;
     background-image: url(../assets/img/footer-bg.jpg);
-    height: 500px;
-    overflow: hidden;
+
 
     .container {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
+        // align-items: center;
+            .logo {
+                margin-left: 6.25rem;
+                width: 30rem;
+                background-image: url(../assets/img/dc-logo-bg.png);
+                background-position: right;
+                background-repeat: no-repeat;
+                background-size: cover;
     }
-
-    img {
-        margin-top: -100px;
     }
 }
 
-.footer nav {
+.footer-top nav {
     display: flex;
+    padding: 2.5rem;
     gap: 2.5rem;
 }
 
@@ -227,7 +232,8 @@ export default {
         justify-content: space-between;
 
         button {
-            padding: 1.25rem;
+            cursor: pointer;
+            padding: .875rem;
             height: 100%;
             background-color: rgba($color: #000000, $alpha: 0);
             border: .125rem solid var(--first-color);

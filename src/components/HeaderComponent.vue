@@ -76,11 +76,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+    max-width: var(--main-container);
+}
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem 0;
+    padding: 1.25rem;
     
     &__nav {
         ul {
@@ -92,7 +95,7 @@ export default {
     &__nav {
         ul {
             li {
-                padding: 1.25rem;
+                padding: .625rem;
             }
         }
     }
