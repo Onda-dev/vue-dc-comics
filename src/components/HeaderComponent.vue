@@ -83,7 +83,12 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem;
+    padding: 1rem;
+
+    img {
+        display: block;
+        width: 60%;
+    }
     
     &__nav {
         ul {
