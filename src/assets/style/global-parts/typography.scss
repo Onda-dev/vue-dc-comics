@@ -20,3 +20,21 @@ main nav {
     text-transform: uppercase;
     color: white;
 }
+
+.footer h3 {
+    color: white;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+}
+
+.footer li {
+    color: var(--third-color);
+}
+
+.footer button {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    font-weight: 600;
+
+}
