@@ -11,41 +11,58 @@
             <div class="main-nav container">
                 <nav>
                     <ul>
-                        <li>
-                            <a href="#">digital comics</a>
-                        </li>
-                        <li>
-                            <a href="#">dc merchandise</a>
-                        </li>
-                        <li>
-                            <a href="#">subscription</a>
-                        </li>
-                        <li>
-                            <a href="#">comic shop locator</a>
-                        </li>
-                        <li>
-                            <a href="#">dc power visa</a>
+                        <li v-for="(link, index) in links" :key="index">
+                            <img :src="link.img" alt="">
+                            <a :href="link.url">{{link.text}}</a>
                         </li>
                     </ul>  
                 </nav>
             </div> 
         </div>
-
     </main>
 </template>
 
 <script>
 export default {
-    name: 'MainComponent'
+    name: 'MainComponent',
+    data() {
+        return {
+            links: [
+                {
+                    text: "digital comics",
+                    url: "#",
+                    img: "./assets/img/buy-comics-digital-comics.png"
+                },
+                {
+                    text: "dc merchandise",
+                    url: "#",
+                    img: "../assets/img/buy-comics-merchandising.png"
+                },
+                {
+                    text: "subscription",
+                    url: "#",
+                    img: "../assets/img/subscriptions.png"
+                },
+                {
+                    text: "comic shop locator",
+                    url: "#",
+                    img: "../assets/img/buy-comics-shop-locator.png"
+                },
+                {
+                    text: "dc power visa",
+                    url: "#",
+                    img: "../assets/img/power-visa.png"
+                },
+            ]
+        }
+    }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .content {
     background-color: black;
     padding: 3.75rem;
-    display: flex;
-    justify-content: center;
 }
 .main-nav-box {
     background-color: var(--first-color);
@@ -53,11 +70,11 @@ export default {
 }
 main ul {
     display: flex;
+    justify-content: center;
     gap: 6.25rem;
 }
 main ul li {
     display: inline-block;
 
 }
-
 </style>
