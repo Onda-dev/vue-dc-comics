@@ -67,7 +67,7 @@ export default {
     max-width: var(--main-container);
 }
 .content {
-    background-color: black;
+    background-color: #1C1C1C;
     padding: 3.75rem;
 }
 .main-nav-box {

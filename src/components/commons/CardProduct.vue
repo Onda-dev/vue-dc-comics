@@ -1,6 +1,8 @@
 <template>
     <div class="product">
-        <img :src="image" :alt="title">
+        <div class="img-box">
+            <img :src="image" :alt="title">
+        </div>
         <h3>{{title}}</h3>
     </div>
 </template>
@@ -16,5 +18,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.product {
+    width: 9.375rem;
+    display: flex;
+    flex-direction: column;
+    gap: .875rem;
 
+    img {
+        width: 9.375rem;
+    }
+}
+
+.img-box {
+    height: 9.375rem;
+    width: 9.375rem;
+    overflow: hidden;
+}
+
+    
 </style>

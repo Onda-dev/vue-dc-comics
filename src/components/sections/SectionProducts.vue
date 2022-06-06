@@ -1,6 +1,6 @@
 <template>
     <section>
-        <ul>
+        <ul class="product-list">
             <li v-for="(product, index) in products" :key="index">
                 <CardProduct :image="product.thumb" :title="product.series" />
             </li>
@@ -97,5 +97,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.875rem;
+}
 </style>
