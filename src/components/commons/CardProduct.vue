@@ -1,13 +1,17 @@
 <template>
     <div class="product">
-        <img src="" alt="">
-        <h3></h3>
+        <img :src="image" :alt="title">
+        <h3>{{title}}</h3>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'CardProduct'
+    name: 'CardProduct',
+    props: {
+        title: String,
+        image: String
+    }
 }
 </script>
 
