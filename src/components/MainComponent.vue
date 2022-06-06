@@ -2,9 +2,7 @@
     <main>
         <div class="content">
             <div class="container">
-                <div class="content-box">
-                    <h1>Content goes here</h1>
-                </div>
+                <SectionProducts/>
             </div>
         </div>
         <div class="main-nav-box">
@@ -23,35 +21,40 @@
 </template>
 
 <script>
+import SectionProducts from '../components/sections/SectionProducts.vue'
+
 export default {
     name: 'MainComponent',
+    components: {
+        SectionProducts
+    },
     data() {
         return {
             links: [
                 {
                     text: "digital comics",
                     url: "#",
-                    img: "./assets/img/buy-comics-digital-comics.png"
+                    img: "/img/buy-comics-digital-comics.png"
                 },
                 {
                     text: "dc merchandise",
                     url: "#",
-                    img: "../assets/img/buy-comics-merchandising.png"
+                    img: "/img/buy-comics-merchandise.png"
                 },
                 {
                     text: "subscription",
                     url: "#",
-                    img: "../assets/img/subscriptions.png"
+                    img: "/img/buy-comics-shop-locator.png"
                 },
                 {
                     text: "comic shop locator",
                     url: "#",
-                    img: "../assets/img/buy-comics-shop-locator.png"
+                    img: "/img/buy-comics-subscriptions.png"
                 },
                 {
                     text: "dc power visa",
                     url: "#",
-                    img: "../assets/img/power-visa.png"
+                    img: "/img/buy-dc-power-visa.svg"
                 },
             ]
         }
@@ -77,7 +80,13 @@ main ul {
     gap: 2.5rem;
 }
 main ul li {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: .625rem;
 
+}
+img {
+    max-width: 3.125rem;
+    max-height: 3.125rem;
 }
 </style>
