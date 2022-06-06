@@ -1,5 +1,6 @@
 <template>
     <main>
+        <div class="hero"></div>
         <div class="content">
             <div class="container">
                 <SectionProducts/>
@@ -88,5 +89,10 @@ main ul li {
 img {
     max-width: 3.125rem;
     max-height: 3.125rem;
+}
+.hero {
+    height: 30vh;
+    background-image: url(../assets/img/jumbotron.jpg);
+    background-size: cover;
 }
 </style>
